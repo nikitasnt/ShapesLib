@@ -6,12 +6,6 @@ namespace Tests.ImplementationTests;
 [SuppressMessage("ReSharper", "ConvertToLocalFunction")]
 public class CircleTests
 {
-    /// <summary>
-    /// Due to the nature of <see cref="double"/>, there needs to be a tolerance up to which results and expected values
-    /// are equivalent.
-    /// </summary>
-    private const double Tolerance = 0.000001d;
-    
     [Theory]
     [InlineData(3d, 28.274334d)]
     [InlineData(10.111d, 321.172309d)]
@@ -25,7 +19,7 @@ public class CircleTests
         var area = circle.GetArea();
 
         // Assert.
-        Assert.True(Math.Abs(expectedArea - area) < Tolerance);
+        Assert.True(Math.Abs(expectedArea - area) < Constants.Tolerance);
     }
 
     [Theory]
