@@ -5,20 +5,48 @@
 /// </summary>
 public class Triangle : IShape
 {
+    private double _side1;
+    private double _side2;
+    private double _side3;
+    
     /// <summary>
     /// The first side of the triangle.
     /// </summary>
-    public double Side1 { get; set; }
-    
+    public double Side1
+    {
+        get => _side1;
+        set
+        {
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(value);
+            _side1 = value;
+        }
+    }
+
     /// <summary>
     /// The second side of the triangle.
     /// </summary>
-    public double Side2 { get; set; }
+    public double Side2
+    {
+        get => _side2;
+        set
+        {
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(value);
+            _side2 = value;
+        }
+    }
     
     /// <summary>
     /// The third side of the triangle.
     /// </summary>
-    public double Side3 { get; set; }
+    public double Side3
+    {
+        get => _side3;
+        set
+        {
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(value);
+            _side3 = value;
+        }
+    }
     
     /// <summary>
     /// Calculate the area of the triangle.

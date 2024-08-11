@@ -5,11 +5,21 @@
 /// </summary>
 public class Circle : IShape
 {
+    private double _radius;
+    
     /// <summary>
     /// Radius of the circle.
     /// </summary>
-    public double Radius { get; set; }
-    
+    public double Radius
+    {
+        get => _radius;
+        set
+        {
+            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(value);
+            _radius = value;
+        }
+    }
+
     /// <summary>
     /// Calculate the area of the circle.
     /// </summary>
