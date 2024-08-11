@@ -12,7 +12,7 @@ public class Triangle : IShape
     /// <summary>
     /// The first side of the triangle.
     /// </summary>
-    public double Side1
+    public required double Side1
     {
         get => _side1;
         set
@@ -25,7 +25,7 @@ public class Triangle : IShape
     /// <summary>
     /// The second side of the triangle.
     /// </summary>
-    public double Side2
+    public required double Side2
     {
         get => _side2;
         set
@@ -38,7 +38,7 @@ public class Triangle : IShape
     /// <summary>
     /// The third side of the triangle.
     /// </summary>
-    public double Side3
+    public required double Side3
     {
         get => _side3;
         set

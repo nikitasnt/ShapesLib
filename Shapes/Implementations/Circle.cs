@@ -10,7 +10,7 @@ public class Circle : IShape
     /// <summary>
     /// Radius of the circle.
     /// </summary>
-    public double Radius
+    public required double Radius
     {
         get => _radius;
         set
