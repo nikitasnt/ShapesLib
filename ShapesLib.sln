@@ -2,7 +2,11 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{E4241AB3-9BBC-42E5-928B-CE3822E3E68C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{82C5F37C-F0F5-4F0F-A39B-9ADC5E852719}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{82C5F37C-F0F5-4F0F-A39B-9ADC5E852719}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{485F968F-A04A-4010-BCDF-DF57630AC250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryClientCodeTests", "LibraryClientCodeTests\LibraryClientCodeTests.csproj", "{75F42370-D6FF-4307-8B6E-481B8785CD0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +22,13 @@ Global
 		{82C5F37C-F0F5-4F0F-A39B-9ADC5E852719}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82C5F37C-F0F5-4F0F-A39B-9ADC5E852719}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82C5F37C-F0F5-4F0F-A39B-9ADC5E852719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F42370-D6FF-4307-8B6E-481B8785CD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F42370-D6FF-4307-8B6E-481B8785CD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F42370-D6FF-4307-8B6E-481B8785CD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F42370-D6FF-4307-8B6E-481B8785CD0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82C5F37C-F0F5-4F0F-A39B-9ADC5E852719} = {485F968F-A04A-4010-BCDF-DF57630AC250}
+		{75F42370-D6FF-4307-8B6E-481B8785CD0B} = {485F968F-A04A-4010-BCDF-DF57630AC250}
 	EndGlobalSection
 EndGlobal

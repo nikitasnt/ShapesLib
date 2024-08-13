@@ -1,4 +1,4 @@
-﻿namespace Tests.ImplementationTests;
+﻿namespace Tests.UnitTests.ImplementationTests;
 
 internal static class Constants
 {

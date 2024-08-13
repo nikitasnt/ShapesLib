@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Shapes.Implementations;
 
-namespace Tests.ImplementationTests;
+namespace Tests.UnitTests.ImplementationTests;
 
 [SuppressMessage("ReSharper", "ConvertToLocalFunction")]
 public class CircleTests
