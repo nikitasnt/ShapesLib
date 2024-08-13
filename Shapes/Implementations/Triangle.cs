@@ -5,47 +5,41 @@
 /// </summary>
 public class Triangle : IShape
 {
-    private double _side1;
-    private double _side2;
-    private double _side3;
-    
     /// <summary>
     /// The first side of the triangle.
     /// </summary>
-    public required double Side1
-    {
-        get => _side1;
-        set
-        {
-            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(value);
-            _side1 = value;
-        }
-    }
+    public double Side1 { get; }
 
     /// <summary>
     /// The second side of the triangle.
     /// </summary>
-    public required double Side2
-    {
-        get => _side2;
-        set
-        {
-            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(value);
-            _side2 = value;
-        }
-    }
+    public double Side2 { get; }
     
     /// <summary>
     /// The third side of the triangle.
     /// </summary>
-    public required double Side3
+    public double Side3 { get; }
+
+    public Triangle(double side1, double side2, double side3)
     {
-        get => _side3;
-        set
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(side1);
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(side2);
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(side3);
+
+        if (!CanBeCreatedFrom(side1, side2, side3))
         {
-            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(value);
-            _side3 = value;
+            throw new ArgumentException(
+                "You cannot create a triangle in which one side is greater than the sum of the other two sides.");
         }
+        
+        Side1 = side1;
+        Side2 = side2;
+        Side3 = side3;
+    }
+
+    private static bool CanBeCreatedFrom(double side1, double side2, double side3)
+    {
+        return side1 + side2 > side3 && side2 + side3 > side1 && side3 + side1 > side2;
     }
     
     /// <summary>

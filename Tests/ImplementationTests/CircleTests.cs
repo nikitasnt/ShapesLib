@@ -13,7 +13,7 @@ public class CircleTests
     public void GetArea_ShouldReturn_CorrectValue(double radius, double expectedArea)
     {
         // Arrange.
-        var circle = new Circle { Radius = radius };
+        var circle = new Circle(radius);
 
         // Act.
         var area = circle.GetArea();
@@ -26,13 +26,13 @@ public class CircleTests
     [InlineData(0d)]
     [InlineData(-1d)]
     [InlineData(-123.456d)]
-    public void RadiusSetter_ShouldThrowException_ForBadRadius(double badRadius)
+    public void Constructor_ShouldThrowException_ForBadRadius(double badRadius)
     {
         // Arrange.
-        var circle = new Circle { Radius = 1d };
-        
+        // Isn't needed.
+
         // Act.
-        Action act = () => circle.Radius = badRadius;
+        var act = () => new Circle(badRadius);
         
         // Assert.
         Assert.Throws<ArgumentOutOfRangeException>(act);

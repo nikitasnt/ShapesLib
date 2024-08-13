@@ -5,19 +5,19 @@
 /// </summary>
 public class Circle : IShape
 {
-    private double _radius;
-    
     /// <summary>
     /// Radius of the circle.
     /// </summary>
-    public required double Radius
+    public double Radius { get; }
+
+    /// <summary>
+    /// Create a circle by specifying a radius.
+    /// </summary>
+    /// <param name="radius">Radius of the circle.</param>
+    public Circle(double radius)
     {
-        get => _radius;
-        set
-        {
-            ArgumentOutOfRangeException.ThrowIfNegativeOrZero(value);
-            _radius = value;
-        }
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(radius);
+        Radius = radius;
     }
 
     /// <summary>
