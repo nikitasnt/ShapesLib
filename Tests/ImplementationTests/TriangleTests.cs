@@ -55,4 +55,36 @@ public class TriangleTests
         // Assert.
         Assert.Throws<ArgumentException>(act);
     }
+
+    [Theory]
+    [InlineData(3d, 4d, 5d)]
+    [InlineData(5d, 12d, 13d)]
+    [InlineData(8d, 15d, 17d)]
+    public void IsRight_ShouldReturn_True_ForRightTriangle(double side1, double side2, double side3)
+    {
+        // Arrange.
+        var triangle = new Triangle(side1, side2, side3);
+        
+        // Act.
+        var result = triangle.IsRight(Constants.Tolerance);
+        
+        // Assert.
+        Assert.True(result);
+    }
+    
+    [Theory]
+    [InlineData(3d, 4d, 6d)]
+    [InlineData(5d, 12d, 14d)]
+    [InlineData(8d, 15d, 18d)]
+    public void IsRight_ShouldReturn_False_ForNotRightTriangle(double side1, double side2, double side3)
+    {
+        // Arrange.
+        var triangle = new Triangle(side1, side2, side3);
+        
+        // Act.
+        var result = triangle.IsRight(Constants.Tolerance);
+        
+        // Assert.
+        Assert.False(result);
+    }
 }
