@@ -1,8 +1,11 @@
-﻿namespace Shapes.Implementations;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Shapes.Implementations;
 
 /// <summary>
 /// Triangle.
 /// </summary>
+[SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
 public class Triangle : IShape
 {
     /// <summary>

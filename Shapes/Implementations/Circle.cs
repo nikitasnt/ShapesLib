@@ -1,8 +1,11 @@
-﻿namespace Shapes.Implementations;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Shapes.Implementations;
 
 /// <summary>
 /// Circle.
 /// </summary>
+[SuppressMessage("ReSharper", "MemberCanBePrivate.Global")]
 public class Circle : IShape
 {
     /// <summary>
